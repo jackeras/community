@@ -13,3 +13,8 @@
 
 ## 工具
 [git](https://git-scm.com/download)
+
+快捷键：
+ctrl+tab 切换
+ctrl+Alt+L 格式化代码
+
