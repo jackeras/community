@@ -12,9 +12,11 @@ import java.io.IOException;
 public class GithubProvider {
     public String getAccessToken(AccessTokenDTO accessTokenDTO) {
         MediaType mediaType = MediaType.get("application/json; charset=utf-8");
+
         OkHttpClient client = new OkHttpClient();
 
         RequestBody body = RequestBody.create(mediaType, JSON.toJSONString(accessTokenDTO));
+        //评论区注解
         Request request = new Request.Builder()
                 .url("https://github.com/login/oauth/access_token?client_id=ed90d610d75d28d79317" +
                         "&client_secret=bb413ad15b03c8c7b3adfc7d2b51e1d88ae4b419&code="+accessTokenDTO
