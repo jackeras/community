@@ -15,6 +15,17 @@
 ## 工具
 [git](https://git-scm.com/download)
 
+## 脚本
+```` sql
+CREATE CACHED TABLE "PUBLIC"."USER"(
+    "ID" INT ACCOUNT_ID" VARCHAR(100),
+    "NAME" VARCHAR(50),
+    "TOKEN" CHAR(36),
+    "GMT_CREATE" BIGINT,
+    "GMT_MODIFIED" BIGINT
+)
+````
+
 快捷键：
 ctrl+tab 切换
 ctrl+Alt+L 格式化代码
