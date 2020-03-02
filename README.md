@@ -14,6 +14,8 @@
 [Spring mybatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
 ## 工具
 [git](https://git-scm.com/download)
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)
+[Lombok](https://www.rojectlombok.org)
 
 ## 脚本
 ```` sql
