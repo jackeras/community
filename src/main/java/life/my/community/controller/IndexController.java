@@ -1,5 +1,6 @@
 package life.my.community.controller;
 
+import life.my.community.dto.PaginationDTO;
 import life.my.community.dto.QuestionDTO;
 import life.my.community.mapper.QuestionMapper;
 import life.my.community.mapper.UserMapper;
@@ -26,7 +27,9 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(HttpServletRequest request,
-                        Model model
+                        Model model,
+                        @RequestParam(name = "page",defaultValue = "1")Integer page,
+                        @RequestParam(name = "size",defaultValue = "5")Integer size
     ) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null && cookies.length != 0) {
@@ -41,8 +44,8 @@ public class IndexController {
                 }
             }
         }
-        List<QuestionDTO> questionList = questionService.list();
-        model.addAttribute("questions", questionList);
+        PaginationDTO pagination = questionService.list(page,size);
+        model.addAttribute("pagination", pagination);
         return "index";
     }
 }
