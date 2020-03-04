@@ -1,7 +1,6 @@
 package life.my.community.controller;
 
 import life.my.community.dto.QuestionDTO;
-import life.my.community.mapper.QuestionMapper;
 import life.my.community.model.Question;
 import life.my.community.model.User;
 import life.my.community.service.QuestionService;
