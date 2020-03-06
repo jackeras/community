@@ -30,5 +30,5 @@ CREATE CACHED TABLE "PUBLIC"."USER"(
 
 快捷键：
 ctrl+tab 切换
-ctrl+Alt+L 格式化代码
+ctrl+Alt+L 格式化
 
