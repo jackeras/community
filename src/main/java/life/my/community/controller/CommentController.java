@@ -3,7 +3,6 @@ package life.my.community.controller;
 import life.my.community.dto.CommentDTO;
 import life.my.community.dto.ResultDTO;
 import life.my.community.exception.CustomizeErrorCode;
-import life.my.community.mapper.CommentMapper;
 import life.my.community.model.Comment;
 import life.my.community.model.User;
 import life.my.community.service.CommentService;
@@ -40,7 +39,7 @@ public class CommentController {
         comment.setGmtModified(System.currentTimeMillis());
         comment.setCommentator(user.getId());
         comment.setLikeCount(0L);
-        CommentService.insert(comment);
+        commentService.insert(comment);
         Map<Object,Object> objectObjectHashMap = new HashMap<>();
         objectObjectHashMap.put("message","成功");
         return ResultDTO.okOf();
